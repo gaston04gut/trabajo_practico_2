@@ -63,6 +63,6 @@ public class Efemeride {
 
 	@Override
 	public String toString() {
-		return "Efemeride [codigo=" + codigo + ", mes=" + mes + ", dia=" + dia + ", detalle=" + detalle + "]";
+		return "**Efemeride**"+"\nCodigo: " + codigo + "\nMes: " + mes + "\nDia: " + dia + "\nDetalles: " + detalle;
 	}
 }
