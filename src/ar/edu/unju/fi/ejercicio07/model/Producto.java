@@ -6,27 +6,29 @@ public class Producto {
 	private Double precioUnitario;
 	private origenFabricacion origeFabricacion;
 	private categoria categoria;
+	private boolean stock;
 	
 	public Producto() {
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	public Producto(String codigo, String descripcion, Double precioUnitario, origenFabricacion origeFabricacion,
-			categoria categoria) {
+			categoria categoria, boolean stock) {
 		this.codigo = codigo;
 		this.descripcion = descripcion;
 		this.precioUnitario = precioUnitario;
 		this.origeFabricacion = origeFabricacion;
 		this.categoria = categoria;
+		this.stock = stock;
 	}
-	
-	
 
 	@Override
 	public String toString() {
-		return "Producto \nCodigo: " + codigo + "\nDescripcion: " + descripcion + "\nPrecio Unitario: $" + precioUnitario
-				+ "\nOrigen de Fabricacion: " + origeFabricacion + "\nCategoria: " + categoria;
+		//+ "\nOrigen de Fabricacion: " + origeFabricacion + "\nCategoria: " + categoria
+		return "Producto \nCodigo: " + codigo + "\nDescripcion: " + descripcion + "\nPrecio Unitario: $" + precioUnitario;
 	}
+	
+
 
 	public String getCodigo() {
 		return codigo;
@@ -67,11 +69,22 @@ public class Producto {
 	public void setCategoria(categoria categoria) {
 		this.categoria = categoria;
 	}
+	
+	public boolean isStock() {
+		return stock;
+	}
+
+	public void setStock(boolean stock) {
+		this.stock = stock;
+	}
+
+
+
 
 	public enum origenFabricacion{
 		ARGENTINA, CHINA, BRASIL, URUGUAY
 	}
-	
+
 	public enum categoria{
 		TELEFONIA, INFORMATICA, ELECTROHOGAR, HERRAMIENTAS
 	}
